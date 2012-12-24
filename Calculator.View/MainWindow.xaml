@@ -1,0 +1,21 @@
+﻿<Window x:Class="Calculator.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="My simple Calculator" Height="521" Width="735">
+    <Grid x:Name="MainGrid">
+        <TextBox x:Name="CurrentVal" GotFocus="FirstClearButtonEventHandler"  FontSize="24"  HorizontalAlignment="Left" Height="50" Margin="365,10,0,0" TextWrapping="Wrap" Text="Write your Value:" VerticalAlignment="Top" Width="245" />
+        <Button FontSize="32" Background="Azure"  Content="Add Value" HorizontalAlignment="Left" Margin="110,65,0,0" VerticalAlignment="Top" Width="250" Click="AddButtonEventHandler" Height="200"/>
+        <Button Content="Remove Value" FontSize="32" Background="BlanchedAlmond"  HorizontalAlignment="Left" Margin="365,65,0,0" VerticalAlignment="Top" Width="245" Click="RemoveButtonEventHandler" Height="200"/>
+        <Button Content="Divide" Background="Coral" FontSize="32"  HorizontalAlignment="Left" Margin="10,270,0,0" VerticalAlignment="Top" Width="350" Click="DivideButtonEventHandler" Height="125"/>
+        <Button Content="Multiply" Background="Chartreuse" FontSize="32" HorizontalAlignment="Left" Margin="365,270,0,0" VerticalAlignment="Top" Width="350" Click="MultiplyButtonEventHandler" Height="125"/>
+        <Button Content="Clear" FontSize="32" Background="PaleGoldenrod"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="95" Click="ClearButtonEventHandler" Height="255"/>
+        <Button Content="Sqrt" FontSize="24" Background="#5CCCCC" HorizontalAlignment="Left" Margin="615,65,0,0" VerticalAlignment="Top" Width="102" Height="100" Click="SqrtButtonEventHandler"/>
+        <Button Content="Modul" FontSize="24" Background="#FFFF40" HorizontalAlignment="Left" Margin="615,170,0,0" VerticalAlignment="Top" Width="102" Height="95" Click="ModulButtonEventHandler"/>
+        <ComboBox x:Name="State" Background="#FFC273" HorizontalAlignment="Left" Margin="615,10,0,0" VerticalAlignment="Top" Width="102" Height="50" SelectionChanged="State_SelectionChanged" HorizontalContentAlignment="Center">
+            <ComboBoxItem Content="Integer" Background="#FD7279" HorizontalAlignment="Left" Width="100" Height="50" HorizontalContentAlignment="Center"/>
+            <ComboBoxItem Content="Double" Background="#E567B1" HorizontalAlignment="Left" Width="100" Height="50" HorizontalContentAlignment="Center"/>
+            <ComboBoxItem Content="Complecs" Background="#A168D5" HorizontalAlignment="Left" Width="100" Height="50" HorizontalContentAlignment="Center"/>
+        </ComboBox>
+        <Label x:Name="ValueNow" Content="Your Value" FontSize="24" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="110,10,0,0" VerticalAlignment="Top" Height="50" Width="250"/>
+    </Grid>
+</Window>
